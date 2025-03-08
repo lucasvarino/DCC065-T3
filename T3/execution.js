@@ -13,7 +13,7 @@ import { generateTerrainNoise, getDimPlane } from "./terrainNoise.js";
 import Camera from "./camera.js";
 import { loadAllTrees, placeRandomTrees } from "./threeLoader.js";
 import { PointerLockControls } from "../build/jsm/controls/PointerLockControls.js";
-import { setMaterial } from "./voxel.js";
+import { previousVoxelType, setMaterial } from "./voxel.js";
 
 // ===== TELA DE CARREGAMENTO =====
 const loadingManager = new THREE.LoadingManager();
@@ -321,6 +321,12 @@ function keyboardUpdate() {
   // Adicionar controle para música
   if (keyboard.down("Q")) {
     toggleBackgroundMusic();
+  }
+
+  // Desativar e ativar a FOG
+  if (keyboard.down("F")) {
+    let guiFogValue = scene.fog.far === 0 ? getDimPlane("execution") : scene.fog.far;
+    scene.fog.far = scene.fog.far === 0 ? guiFogValue : 0;
   }
 }
 
