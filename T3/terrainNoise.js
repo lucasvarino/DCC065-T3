@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import { SimplexNoise } from "../../build/jsm/math/SimplexNoise.js";
+import { SimplexNoise } from "../build/jsm/math/SimplexNoise.js";
 import { setDefaultMaterial } from "../libs/util/util.js";
 import { setMaterial } from "./voxel.js";
 

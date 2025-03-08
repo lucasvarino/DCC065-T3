@@ -6,8 +6,8 @@ import {
   onWindowResize,
   createGroundPlaneXZ,
 } from "../libs/util/util.js";
-import GUI from "../../libs/util/dat.gui.module.js";
-import KeyboardState from "../../libs/util/KeyboardState.js";
+import GUI from "../libs/util/dat.gui.module.js";
+import KeyboardState from "../libs/util/KeyboardState.js";
 import Stats from "../build/jsm/libs/stats.module.js";
 import { generateTerrainNoise, getDimPlane } from "./terrainNoise.js";
 import Camera from "./camera.js";
